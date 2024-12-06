@@ -6,7 +6,7 @@ app = Flask(__name__)
 TOKEN = "7595890172:AAEjVFxa3-U7wUf_kRDklrspLjHilJmGUDU"
 TELEGRAM_URL = f"https://api.telegram.org/bot{TOKEN}"
 
-@app.route("/", methods=["GET", "POST"])
+@app.route((f'/{TOKEN}', methods=["GET", "POST"])
 def webhook():
     if request.method == "POST":
         data = request.json
