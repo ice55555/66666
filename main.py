@@ -3,6 +3,10 @@ import requests
 
 app = Flask(__name__)
 
+@app.route("/", methods=["GET"])
+def home():
+    return "Telegram Bot is running!"
+
 TOKEN = "7595890172:AAEjVFxa3-U7wUf_kRDklrspLjHilJmGUDU"
 TELEGRAM_URL = f"https://api.telegram.org/bot{TOKEN}"
 
